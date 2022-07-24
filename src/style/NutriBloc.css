@@ -1,0 +1,40 @@
+.nutriBloc {
+  width: 100%;
+  padding: 1em;
+  background-color: #fbfbfb;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.nutriBloc_picture {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.nutriBloc_picture img {
+  width: 50%;
+}
+
+.nutriBloc_content {
+  font-size: 0.6rem;
+}
+
+.bg_red {
+  background-color: #fbeaea;
+}
+
+.bg_blue {
+  background-color: #e9f4fb;
+}
+.bg_yellow {
+  background-color: #fbf6e5;
+}
+.bg_pink {
+  background-color: #fbeaef;
+}

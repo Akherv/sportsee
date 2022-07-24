@@ -1,0 +1,10 @@
+.activity {
+  width: 100%;
+  background-color: #fbfbfb;
+  grid-row: 4/8;
+  grid-column: 1/4;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

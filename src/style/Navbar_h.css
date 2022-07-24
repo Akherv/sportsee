@@ -1,0 +1,33 @@
+.navbar_h {
+  height: calc(10vh - 1em);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  background-color: #020203;
+}
+
+.navbar_h img {
+  width: 200px;
+  margin-right: 2em;
+}
+
+.navbar_h_links {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar_h_links li a {
+  color: #fff;
+}
+
+.navbar_h_links li a:hover {
+  color: #e60000;
+}
+
+.navbar_h_links_active {
+  color: #e60000;
+}

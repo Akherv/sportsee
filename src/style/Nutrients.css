@@ -1,0 +1,16 @@
+.nutrients {
+  width: 100%;
+  grid-row: 4/12;
+  grid-column: 4/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nutrients ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

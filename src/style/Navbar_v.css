@@ -1,0 +1,25 @@
+.navbar_v {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4em 1em 1em;
+  font-size: 1.2rem;
+  background-color: #020203;
+}
+
+.navbar_v_links {
+  display: flex;
+  flex-direction: column;
+}
+.navbar_v_links li {
+  margin-top: 1em;
+}
+
+.legal {
+  font-size: 0.7rem;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  color: #fff;
+}

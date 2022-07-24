@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #e5e5e5;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: #e60000;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

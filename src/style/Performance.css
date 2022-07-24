@@ -1,0 +1,10 @@
+.performance {
+  width: 100%;
+  background-color: #282d30;
+  grid-row: 8/12;
+  grid-column: 2/3;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
