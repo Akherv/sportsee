@@ -46,14 +46,7 @@ const data = [
   },
 ];
 
-// const style = {
-//   color: "#fff",
-//   fontSize:15
-// };
-
 function Sessions() {
-  //demoUrl = "https://codesandbox.io/s/simple-line-chart-kec3v";
-
   return (
     <div className="sessions">
       <ResponsiveContainer width="100%" height="100%">
@@ -64,7 +57,6 @@ function Sessions() {
             textAnchor="middle"
             dominantBaseline="middle"
             className="progress-label"
-            // style={style}
             fill="#fff"
             fontSize={15}
           >

@@ -81,7 +81,7 @@ function Activity() {
           >
             Activité quotidienne
           </text>
-          <CartesianGrid strokeDasharray="3 3" />
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="name" stroke="#9B9EAC" />
           <YAxis yAxisId="left" orientation="left" hide />
           <YAxis
@@ -90,15 +90,34 @@ function Activity() {
             stroke="#9B9EAC"
             axisLine={false}
           />
-          <Tooltip />
+          <Tooltip
+            contentStyle={{
+              backgroundColor: "#E60000",
+              borderRadius: 5,
+              border: "none",
+              color: "#fff",
+            }}
+          />
           <Legend
             verticalAlign="top"
             align="right"
             height={36}
             iconType="circle"
           />
-          <Bar yAxisId="left" dataKey="uv" fill="#282D30" />
-          <Bar yAxisId="right" dataKey="pv" fill="#E60000" />
+          <Bar
+            barSize={20}
+            yAxisId="left"
+            dataKey="uv"
+            fill="#282D30"
+            radius={[10, 10, 0, 0]}
+          />
+          <Bar
+            barSize={20}
+            yAxisId="right"
+            dataKey="pv"
+            fill="#E60000"
+            radius={[10, 10, 0, 0]}
+          />
         </BarChart>
       </ResponsiveContainer>
     </div>
