@@ -12,16 +12,23 @@ import "../style/Score.css";
 
 const data = [
   {
-    name: "unknow",
-    uv: 6.67,
-    pv: 4800,
+    // name: "unknow",
+    // uv: 6.67,
+    // pv: 4800,
     fill: "#e60000",
   },
 ];
+
 // const data01 = [{ name: "Group A", value: 100 }];
 // const data02 = [{ name: "A1", value: 10 }];
 
-function Score() {
+function Score({ userScore }) {
+  // const data =
+  //   userScore &&
+  //   userScore.map((el) => ({
+  //     name: "",
+  //     score: el.score,
+  //   }));
   return (
     <div className="score">
       <ResponsiveContainer width="100%" height="100%">
@@ -31,8 +38,8 @@ function Score() {
           data={data}
           innerRadius={100}
           barSize={10}
-          startAngle={250}
-          endAngle={-290}
+          startAngle={0}
+          endAngle={50}
         >
           <PolarAngleAxis
             type="number"

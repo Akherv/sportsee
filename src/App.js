@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NavbarH from "./components/Navbar_h";
 import Home from "./pages/Home";
@@ -21,7 +21,6 @@ export default function App() {
         const res = await fetch(url);
         const datas = await res.json();
         setUser(datas);
-        console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -36,7 +35,6 @@ export default function App() {
         const res = await fetch(url);
         const datas = await res.json();
         setActivity(datas);
-        console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -51,7 +49,6 @@ export default function App() {
         const res = await fetch(url);
         const datas = await res.json();
         setSessions(datas);
-        console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -66,7 +63,6 @@ export default function App() {
         const res = await fetch(url);
         const datas = await res.json();
         setPerformance(datas);
-        console.log(datas);
       } catch (error) {
         console.log(error);
       }
@@ -75,53 +71,51 @@ export default function App() {
   }, []);
 
   return (
-    <Router>
-      <>
-        <NavbarH />
-        <Routes>
-          <Route
-            exact
-            path="/"
-            element={
-              <Home
-                user={user}
-                activity={activity}
-                sessions={sessions}
-                performance={performance}
-              />
-            }
-          />
-          <Route
-            path="/home"
-            element={
-              <Home
-                user={user}
-                activity={activity}
-                sessions={sessions}
-                performance={performance}
-              />
-            }
-          />
-          <Route
-            path="/accueil"
-            element={
-              <Home
-                user={user}
-                activity={activity}
-                sessions={sessions}
-                performance={performance}
-              />
-            }
-          />
-          <Route path="/profil" element={<Profil />} />
-          <Route path="/parameter" element={<Parameter />} />
-          <Route path="/reglage" element={<Parameter />} />
-          <Route path="/communaute" element={<Community />} />
-          <Route path="/community" element={<Community />} />
-          {/* <Route path="notFound" element={<Error />} />
+    <>
+      <NavbarH />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Home
+              user={user}
+              activity={activity}
+              sessions={sessions}
+              performance={performance}
+            />
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <Home
+              user={user}
+              activity={activity}
+              sessions={sessions}
+              performance={performance}
+            />
+          }
+        />
+        <Route
+          path="/accueil"
+          element={
+            <Home
+              user={user}
+              activity={activity}
+              sessions={sessions}
+              performance={performance}
+            />
+          }
+        />
+        <Route path="/profil" element={<Profil />} />
+        <Route path="/parameter" element={<Parameter />} />
+        <Route path="/reglage" element={<Parameter />} />
+        <Route path="/communaute" element={<Community />} />
+        <Route path="/community" element={<Community />} />
+        {/* <Route path="notFound" element={<Error />} />
           <Route path="*" element={<Navigate to="/notFound" replace />} /> */}
-        </Routes>
-      </>
-    </Router>
+      </Routes>
+    </>
   );
 }

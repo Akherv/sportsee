@@ -7,17 +7,20 @@ import Score from "../components/Score";
 import Nutrients from "../components/Nutrients";
 import "../style/Home.css";
 
-function Home() {
+function Home({ user, activity, sessions, performance }) {
   return (
     <div className="home">
       <NavbarV />
       <div className="dashboard">
-        <Header />
-        <Activity />
-        <Sessions />
-        <Performance />
-        <Score />
-        <Nutrients />
+        <Header userInfos={user?.data.userInfos} />
+        <Activity sessions={activity?.data.sessions} />
+        <Sessions sessions={sessions?.data.sessions} />
+        <Performance
+          type={performance?.data.kind}
+          data={performance?.data.data}
+        />
+        <Score userScore={user?.data.score} />
+        <Nutrients userKeyData={user?.data.keyData} />
       </div>
     </div>
   );

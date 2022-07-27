@@ -9,60 +9,22 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "../style/Activity.css";
+import Tooltips from "../components/Tooltips";
 
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400,
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210,
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290,
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000,
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181,
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
-];
+function Activity({ sessions }) {
+  const datas = sessions?.map((el, idx) => ({
+    name: idx + 1,
+    kilogram: el.kilogram,
+    calories: el.calories,
+  }));
 
-function Activity() {
   return (
     <div className="activity">
       <ResponsiveContainer width="100%">
         <BarChart
           width={500}
           height={300}
-          data={data}
+          data={datas}
           margin={{
             top: 20,
             right: 30,
@@ -91,8 +53,9 @@ function Activity() {
             axisLine={false}
           />
           <Tooltip
+            content={<Tooltips data={datas} />}
             contentStyle={{
-              backgroundColor: "#E60000",
+              // backgroundColor: "#E60000",
               borderRadius: 5,
               border: "none",
               color: "#fff",
@@ -107,14 +70,14 @@ function Activity() {
           <Bar
             barSize={20}
             yAxisId="left"
-            dataKey="uv"
+            dataKey="kilogram"
             fill="#282D30"
             radius={[10, 10, 0, 0]}
           />
           <Bar
             barSize={20}
             yAxisId="right"
-            dataKey="pv"
+            dataKey="calories"
             fill="#E60000"
             radius={[10, 10, 0, 0]}
           />

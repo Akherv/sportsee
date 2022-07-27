@@ -1,6 +1,6 @@
 import "../style/NutriBloc.css";
 
-function NutriBloc({ type, bgColor }) {
+function NutriBloc({ type, bgColor, data, title }) {
   return (
     <div className="nutriBloc">
       <div
@@ -18,9 +18,9 @@ function NutriBloc({ type, bgColor }) {
       </div>
       <div className="nutriBloc_content">
         <h2>
-          <span>1,930kCal</span>
+          <span>{data} Cal</span>
           <br />
-          Calorie
+          {title}
         </h2>
       </div>
     </div>
