@@ -5,6 +5,12 @@ import fitness from "../assets/fitness.png";
 import Icon from "../components/Icon";
 import "../style/Navbar_v.css";
 
+/**
+ * Represents a navbar.
+ * @constructor
+ * @return {React.ReactElement} - navbar of the app
+ */
+
 function Navbar_v() {
   return (
     <nav className="navbar_v">

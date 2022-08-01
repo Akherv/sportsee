@@ -1,4 +1,12 @@
+import PropTypes from "prop-types";
 import "../style/Header.css";
+
+/**
+ * Represents a header.
+ * @constructor
+ * @param {object} userInfos - contains the firstName of the user
+ * @return {React.ReactElement} - header of dashboard
+ */
 
 function Header({ userInfos }) {
   return (
@@ -11,3 +19,7 @@ function Header({ userInfos }) {
   );
 }
 export default Header;
+
+Header.propTypes = {
+  type: PropTypes.object,
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import energy from "../assets/energy.png";
 import chicken from "../assets/chicken.png";
 import apple from "../assets/apple.png";
@@ -52,3 +53,7 @@ function Nutrients({ userKeyData }) {
   );
 }
 export default Nutrients;
+
+Nutrients.propTypes = {
+  userKeyData: PropTypes.object,
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../style/Icon.css";
 
 function Icon({ type }) {
@@ -7,10 +8,7 @@ function Icon({ type }) {
     </div>
   );
 }
-// Icon.propTypes = {
-//   type: PropTypes.string.isRequired
-// }
-// Icon.defaultProps = {
-//   type: 'Mon titre par défaut',
-// }
+Icon.propTypes = {
+  type: PropTypes.string.isRequired,
+};
 export default Icon;

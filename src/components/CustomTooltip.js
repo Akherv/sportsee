@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import "../style/CustomTooltip.css";
 
-function CustomTooltip({ active, payload, label, type }) {
+function CustomTooltip({ active, payload, type }) {
   if (active && payload && payload.length) {
     if (type === "activity") {
       return (
@@ -20,3 +21,9 @@ function CustomTooltip({ active, payload, label, type }) {
   return null;
 }
 export default CustomTooltip;
+
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+  type: PropTypes.string.isRequired,
+};

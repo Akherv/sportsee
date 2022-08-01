@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   Radar,
   RadarChart,
@@ -43,3 +44,8 @@ function Performance({ type, data }) {
   );
 }
 export default Performance;
+
+Performance.propTypes = {
+  type: PropTypes.object,
+  data: PropTypes.array,
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import NavbarV from "../components/Navbar_v";
 import Header from "../components/Header";
 import Activity from "../components/Activity";
@@ -26,3 +27,10 @@ function Home({ user, activity, sessions, performance }) {
   );
 }
 export default Home;
+
+Home.propTypes = {
+  user: PropTypes.object,
+  activity: PropTypes.object,
+  sessions: PropTypes.object,
+  performance: PropTypes.object,
+};

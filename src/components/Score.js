@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   RadialBarChart,
   RadialBar,
@@ -84,3 +85,7 @@ function Score({ userScore }) {
   );
 }
 export default Score;
+
+Score.propTypes = {
+  userScore: PropTypes.number,
+};

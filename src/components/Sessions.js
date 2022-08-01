@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { LineChart, Line, ResponsiveContainer, XAxis, Tooltip } from "recharts";
 import CustomTooltip from "../components/CustomTooltip";
 import "../style/Sessions.css";
@@ -68,3 +69,7 @@ function Sessions({ sessions }) {
   );
 }
 export default Sessions;
+
+Sessions.propTypes = {
+  sessions: PropTypes.array,
+};

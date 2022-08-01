@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "../style/NutriBloc.css";
 
 function NutriBloc({ type, bgColor, data, unit, title }) {
@@ -18,7 +19,9 @@ function NutriBloc({ type, bgColor, data, unit, title }) {
       </div>
       <div className="nutriBloc_content">
         <h2>
-          <span>{data} {unit}</span>
+          <span>
+            {data} {unit}
+          </span>
           <br />
           <span className="nutriBloc_content_title">{title}</span>
         </h2>
@@ -27,3 +30,11 @@ function NutriBloc({ type, bgColor, data, unit, title }) {
   );
 }
 export default NutriBloc;
+
+NutriBloc.propTypes = {
+  type: PropTypes.string.isRequired,
+  bgColor: PropTypes.string.isRequired,
+  data: PropTypes.number,
+  unit: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};

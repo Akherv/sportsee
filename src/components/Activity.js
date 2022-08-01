@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import {
   BarChart,
   Bar,
@@ -93,3 +94,7 @@ function Activity({ sessions }) {
   );
 }
 export default Activity;
+
+Activity.propTypes = {
+  sessions: PropTypes.array,
+};
