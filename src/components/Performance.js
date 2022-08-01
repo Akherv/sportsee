@@ -9,22 +9,33 @@ import {
 import "../style/Performance.css";
 
 function Performance({ type, data }) {
-  const datas = data.map((el) => ({
-    subject: type[el.kind],
-    A: el.value,
-  }));
+  const datas =
+    data &&
+    data.map((el) => ({
+      subject: type[el.kind],
+      A: el.value,
+    }));
   return (
     <div className="performance">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart cx="50%" cy="50%" outerRadius="50%" data={datas}>
-          <PolarGrid vertical={false} />
+        <RadarChart
+          cx="50%"
+          cy="50%"
+          outerRadius="80%"
+          innerRadius={10}
+          data={datas}
+          margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+        >
+          <PolarGrid vertical={false} radialLines={false} />
           <PolarAngleAxis
             dataKey="subject"
             stroke="#fff"
-            fontSize={15}
-            vertical={false}
+            fontSize={12}
+            tickLine={false}
+            axisLine={false}
+            style={{ transform: "rotate(60)" }}
           />
-          <PolarRadiusAxis axisLine={false} tick={false} />
+          <PolarRadiusAxis axisLine={false} tick={false} scale="auto" />
           <Radar name="Mike" dataKey="A" fill="#FF0101" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>

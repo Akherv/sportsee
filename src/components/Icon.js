@@ -1,7 +1,6 @@
 import "../style/Icon.css";
 
 function Icon({ type }) {
-  // console.log(type);
   return (
     <div className="icon">
       <img src={type} alt={type} />

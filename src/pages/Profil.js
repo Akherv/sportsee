@@ -1,4 +1,4 @@
 function Profil() {
-  return <div className="profil">Profil</div>;
+  return <div className="profil center-element">Profil</div>;
 }
 export default Profil;

@@ -8,8 +8,8 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import CustomTooltip from "../components/CustomTooltip";
 import "../style/Activity.css";
-import Tooltips from "../components/Tooltips";
 
 function Activity({ sessions }) {
   const datas = sessions?.map((el, idx) => ({
@@ -44,40 +44,46 @@ function Activity({ sessions }) {
             Activité quotidienne
           </text>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="name" stroke="#9B9EAC" />
-          <YAxis yAxisId="left" orientation="left" hide />
+          <XAxis dataKey="name" stroke="#9B9EAC" tickLine={false} dy={10} />
+          <YAxis yAxisId="right" stroke="#9B9EAC" orientation="left" hide />
           <YAxis
-            yAxisId="right"
+            yAxisId="left"
             orientation="right"
             stroke="#9B9EAC"
             axisLine={false}
+            tickLine={false}
           />
           <Tooltip
-            content={<Tooltips data={datas} />}
+            content={<CustomTooltip type="activity" />}
             contentStyle={{
-              // backgroundColor: "#E60000",
+              backgroundColor: "#E60000",
               borderRadius: 5,
               border: "none",
               color: "#fff",
             }}
+            itemStyle={{ color: "#fff" }}
+            cursor={false}
           />
           <Legend
             verticalAlign="top"
             align="right"
-            height={36}
+            height={60}
             iconType="circle"
+            iconSize={8}
           />
           <Bar
-            barSize={20}
+            barSize={15}
             yAxisId="left"
             dataKey="kilogram"
+            name="Poids (Kg)"
             fill="#282D30"
             radius={[10, 10, 0, 0]}
           />
           <Bar
-            barSize={20}
+            barSize={15}
             yAxisId="right"
             dataKey="calories"
+            name="Calories brûlées (kCal)"
             fill="#E60000"
             radius={[10, 10, 0, 0]}
           />

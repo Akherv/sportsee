@@ -8,3 +8,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.progress-label-number {
+  font-weight: 600;
+}
+
+.progress-label-text {
+  fill: #9b9eac;
+}

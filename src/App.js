@@ -1,11 +1,12 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { config } from "./Constants.js";
 import NavbarH from "./components/Navbar_h";
 import Home from "./pages/Home";
 import Profil from "./pages/Profil";
 import Parameter from "./pages/Parameter";
 import Community from "./pages/Community";
-// import Error from "./pages/Error";
+import Error from "./pages/Error";
 
 export default function App() {
   const [user, setUser] = useState();
@@ -15,7 +16,7 @@ export default function App() {
 
   //fetch location
   useEffect(() => {
-    const url = "./datas/user/18/user.json";
+    const url = config.url.REACT_APP_API_URL_USER;
     const fetchData = async () => {
       try {
         const res = await fetch(url);
@@ -29,7 +30,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const url = "./datas/user/18/activity.json";
+    const url = config.url.REACT_APP_API_URL_ACTIVITY;
     const fetchData = async () => {
       try {
         const res = await fetch(url);
@@ -43,7 +44,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const url = "./datas/user/18/average-sessions.json";
+    const url = config.url.REACT_APP_API_URL_AVERAGESESSION;
     const fetchData = async () => {
       try {
         const res = await fetch(url);
@@ -57,7 +58,7 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const url = "./datas/user/18/performance.json";
+    const url = config.url.REACT_APP_API_URL_PERFORMANCE;
     const fetchData = async () => {
       try {
         const res = await fetch(url);
@@ -113,8 +114,8 @@ export default function App() {
         <Route path="/reglage" element={<Parameter />} />
         <Route path="/communaute" element={<Community />} />
         <Route path="/community" element={<Community />} />
-        {/* <Route path="notFound" element={<Error />} />
-          <Route path="*" element={<Navigate to="/notFound" replace />} /> */}
+        <Route path="notFound" element={<Error />} />
+        <Route path="*" element={<Navigate to="/notFound" replace />} />
       </Routes>
     </>
   );

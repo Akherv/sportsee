@@ -1,0 +1,11 @@
+.custom-tooltip_activity {
+  background-color: #e60000;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.custom-tooltip_sessions {
+  background-color: #fff;
+  padding: 0 0.5em;
+  color: #000;
+}

@@ -7,4 +7,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.sessions:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #e20000;
+  z-index: -1;
 }

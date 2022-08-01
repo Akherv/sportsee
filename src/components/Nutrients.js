@@ -15,6 +15,7 @@ function Nutrients({ userKeyData }) {
               type={energy}
               bgColor={"red"}
               data={userKeyData?.calorieCount}
+              unit="KCal"
               title="Calories"
             />
           </li>
@@ -23,6 +24,7 @@ function Nutrients({ userKeyData }) {
               type={chicken}
               bgColor="blue"
               data={userKeyData?.proteinCount}
+              unit="g"
               title="Proteines"
             />
           </li>
@@ -31,6 +33,7 @@ function Nutrients({ userKeyData }) {
               type={apple}
               bgColor="yellow"
               data={userKeyData?.carbohydrateCount}
+              unit="g"
               title="Glucides"
             />
           </li>
@@ -39,6 +42,7 @@ function Nutrients({ userKeyData }) {
               type={cheeseburger}
               bgColor="pink"
               data={userKeyData?.lipidCount}
+              unit="g"
               title="Lipides"
             />
           </li>

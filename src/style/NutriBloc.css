@@ -1,9 +1,8 @@
 .nutriBloc {
   width: 100%;
-  padding: 1em;
+  padding: 1.5em;
   background-color: #fbfbfb;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   border-radius: 5px;
 }
@@ -18,11 +17,18 @@
 }
 
 .nutriBloc_picture img {
-  width: 50%;
+  width: 30%;
 }
 
 .nutriBloc_content {
   font-size: 0.6rem;
+  margin-left: 20px;
+}
+
+.nutriBloc_content_title {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #9b9eac;
 }
 
 .bg_red {
