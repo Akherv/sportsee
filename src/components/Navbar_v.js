@@ -6,9 +6,10 @@ import Icon from "../components/Icon";
 import "../style/Navbar_v.css";
 
 /**
- * Represents a navbar.
- * @constructor
- * @return {React.ReactElement} - navbar of the app
+ * Represents a vertical navbar.
+ * @component
+ * @param void
+ * @return {React.ReactElement} Vertical navbar
  */
 
 function Navbar_v() {

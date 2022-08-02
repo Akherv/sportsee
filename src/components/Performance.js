@@ -9,6 +9,13 @@ import {
 } from "recharts";
 import "../style/Performance.css";
 
+/**
+ * Represents the Performance bloc chart.
+ * @param   {Object}  type  Score type
+ * @param   {Array.<{value: number, kind: number}>}  data  Score data
+ * @return  {React.ReactElement} Performance bloc chart
+ */
+
 function Performance({ type, data }) {
   const datas =
     data &&

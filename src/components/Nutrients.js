@@ -6,6 +6,12 @@ import cheeseburger from "../assets/cheeseburger.png";
 import NutriBloc from "./NutriBloc";
 import "../style/Nutrients.css";
 
+/**
+ * Represents the container for NutriBloc element
+ * @param   {object}  userKeyData Nutrition datas
+ * @return  {React.ReactElement}  Container for NutriBloc element
+ */
+
 function Nutrients({ userKeyData }) {
   return (
     <>

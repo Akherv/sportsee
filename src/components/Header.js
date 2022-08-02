@@ -3,12 +3,13 @@ import "../style/Header.css";
 
 /**
  * Represents a header.
- * @constructor
- * @param {object} userInfos - contains the firstName of the user
- * @return {React.ReactElement} - header of dashboard
+ * @component
+ * @param {{ userInfos: { firstName: string, lastName: string, age: number }}} userInfos Contains the firstName of the user
+ * @return {React.ReactElement} Header of dashboard
  */
 
 function Header({ userInfos }) {
+  console.log(userInfos);
   return (
     <div className="header">
       <h1>

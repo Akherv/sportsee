@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 import "../style/CustomTooltip.css";
 
+/**
+ * Represents a customTooltip.
+ * @param   {boolean} active      True if the user hover on chart
+ * @param   {array}   payload     Datas of the chart
+ * @param   {string}  type        (activity|sessions)
+ * @return  {React.ReactElement}  CustomTooltip for a chart
+ */
+
 function CustomTooltip({ active, payload, type }) {
   if (active && payload && payload.length) {
     if (type === "activity") {

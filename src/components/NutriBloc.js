@@ -1,6 +1,16 @@
 import PropTypes from "prop-types";
 import "../style/NutriBloc.css";
 
+/**
+ * Represents a bloc of nutrition data information
+ * @param   {string}  type     Nutrition type of img
+ * @param   {string}  bgColor  BgColor
+ * @param   {number}  data     Nutrition datas
+ * @param   {string}  unit     (KCal|g|)
+ * @param   {string}  title    Nutrition title
+ * @return  {React.ReactElement} Nutrition data element
+ */
+
 function NutriBloc({ type, bgColor, data, unit, title }) {
   return (
     <div className="nutriBloc">

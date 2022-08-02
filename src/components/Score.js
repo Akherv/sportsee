@@ -7,11 +7,17 @@ import {
 } from "recharts";
 import "../style/Score.css";
 
+/**
+ * Represents the Score bloc chart.
+ * @param   {number}  userScore  Score datas
+ * @return  {React.ReactElement} Score bloc chart
+ */
+
 function Score({ userScore }) {
   const circleSize = 300;
   const data = [
     {
-      score: userScore * 10,
+      score: userScore * 100,
       fill: "#e60000",
     },
   ];
@@ -60,7 +66,7 @@ function Score({ userScore }) {
               fontSize={30}
               className="progress-label-number"
             >
-              12%
+              {userScore * 100}
             </tspan>
             <tspan
               x={330 / 2}

@@ -1,10 +1,12 @@
-# Context
+# Sportsee Dashboard
+
+## Context
 
 This repo contains all the source code to run the FRONTEND of the micro API for the sports analytics dashboard SportSee.
 
 ## Technologies :
 
-React / React-router
+React / React-router / Yarn
 
 ## How to lauch the application ?
 
@@ -18,7 +20,7 @@ $ git clone https://github.com/Akherv/sportsee.git
 
 https://github.com/Akherv/P9-front-end-dashboard/blob/master/README.md
 
-### step 2 - Launch the FrontEnd :
+### step 3 - Launch the FrontEnd :
 
 Go to the folder :
 
@@ -26,7 +28,7 @@ Go to the folder :
 $ cd sportsee
 ```
 
-Installez les packages yarn (décrits dans `package.json`) :
+Instal yarn packages (describe in `package.json`) :
 
 ```
 $ yarn install

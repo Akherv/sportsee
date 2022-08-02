@@ -3,6 +3,12 @@ import { LineChart, Line, ResponsiveContainer, XAxis, Tooltip } from "recharts";
 import CustomTooltip from "../components/CustomTooltip";
 import "../style/Sessions.css";
 
+/**
+ * Represents the Sessions bloc chart.
+ * @param   {Array.<{day: number, sessionLength: number}>}  sessions  Sessions datas
+ * @return  {React.ReactElement} Sessions bloc chart
+ */
+
 function Sessions({ sessions }) {
   const weekDay = ["L", "M", "M", "J", "V", "S", "D"];
   const datas = sessions?.map((el) => ({

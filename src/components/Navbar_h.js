@@ -2,6 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.svg";
 import "../style/Navbar_h.css";
 
+/**
+ * Represents an horizontal navbar.
+ * @component
+ * @param void
+ * @return {React.ReactElement} Horizontal navbar
+ */
+
 function Navbar_h() {
   const location = useLocation();
 

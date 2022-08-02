@@ -12,6 +12,13 @@ import {
 import CustomTooltip from "../components/CustomTooltip";
 import "../style/Activity.css";
 
+/**
+ * Represents the Activity bloc chart.
+ * @component
+ * @param   {array}  sessions    Sessions datas
+ * @return  {React.ReactElement} Activity bloc chart
+ */
+
 function Activity({ sessions }) {
   const datas = sessions?.map((el, idx) => ({
     name: idx + 1,
