@@ -4,7 +4,6 @@ import "../style/Navbar_h.css";
 
 /**
  * Represents an horizontal navbar.
- * @component
  * @param void
  * @return {React.ReactElement} Horizontal navbar
  */

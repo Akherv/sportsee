@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/CustomTooltip.js</title>
+    <title>JSDoc: Source: pages/Community.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/CustomTooltip.js</h1>
+    <h1 class="page-title">Source: pages/Community.js</h1>
 
     
 
@@ -26,43 +26,16 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import PropTypes from "prop-types";
-import "../style/CustomTooltip.css";
-
-/**
- * Represents a customTooltip.
- * @param   {boolean} active      True if the user hover on chart
- * @param   {Array}   payload     Datas of the chart
- * @param   {string}  type        (activity|sessions)
- * @return  {React.ReactElement}  CustomTooltip for a chart
+            <pre class="prettyprint source linenums"><code>/**
+ * Represents the Community page
+ * @param   void
+ * @return  {React.ReactElement}  Community page
  */
 
-function CustomTooltip({ active, payload, type }) {
-  if (active &amp;&amp; payload &amp;&amp; payload.length) {
-    if (type === "activity") {
-      return (
-        &lt;div className="custom-tooltip_activity">
-          &lt;p className="label">{`${payload[0].payload?.kilogram}g`}&lt;/p>
-          &lt;p className="label">{`${payload[0].payload?.calories}KCal`}&lt;/p>
-        &lt;/div>
-      );
-    } else {
-      return (
-        &lt;div className="custom-tooltip_sessions">
-          &lt;p className="label">{`${payload[0].payload?.sessionLength} min`}&lt;/p>
-        &lt;/div>
-      );
-    }
-  }
-  return null;
+function Community() {
+  return &lt;div className="community center-element">Community&lt;/div>;
 }
-export default CustomTooltip;
-
-CustomTooltip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
-  type: PropTypes.string.isRequired,
-};
+export default Community;
 </code></pre>
         </article>
     </section>

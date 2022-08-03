@@ -8,7 +8,7 @@ import "../style/Nutrients.css";
 
 /**
  * Represents the container for NutriBloc element
- * @param   {object}  userKeyData Nutrition datas
+ * @param   {Object}  userKeyData Nutrition datas
  * @return  {React.ReactElement}  Container for NutriBloc element
  */
 

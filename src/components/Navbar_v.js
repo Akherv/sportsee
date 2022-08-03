@@ -7,7 +7,6 @@ import "../style/Navbar_v.css";
 
 /**
  * Represents a vertical navbar.
- * @component
  * @param void
  * @return {React.ReactElement} Vertical navbar
  */

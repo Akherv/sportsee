@@ -1,3 +1,4 @@
+/* Setting the API url depending on the environment(development|production). */
 const userId = 12; //karl
 const userIdMock = 18; //Cecilia
 

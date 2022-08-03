@@ -14,8 +14,7 @@ import "../style/Activity.css";
 
 /**
  * Represents the Activity bloc chart.
- * @component
- * @param   {array}  sessions    Sessions datas
+ * @param   {Array}  sessions    Sessions datas
  * @return  {React.ReactElement} Activity bloc chart
  */
 
@@ -103,5 +102,5 @@ function Activity({ sessions }) {
 export default Activity;
 
 Activity.propTypes = {
-  sessions: PropTypes.array,
+  sessions: PropTypes.array.isRequired,
 };

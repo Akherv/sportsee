@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/CustomTooltip.js</title>
+    <title>JSDoc: Source: pages/Home.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/CustomTooltip.js</h1>
+    <h1 class="page-title">Source: pages/Home.js</h1>
 
     
 
@@ -27,41 +27,48 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>import PropTypes from "prop-types";
-import "../style/CustomTooltip.css";
+import NavbarV from "../components/Navbar_v";
+import Header from "../components/Header";
+import Activity from "../components/Activity";
+import Sessions from "../components/Sessions";
+import Performance from "../components/Performance";
+import Score from "../components/Score";
+import Nutrients from "../components/Nutrients";
+import "../style/Home.css";
 
 /**
- * Represents a customTooltip.
- * @param   {boolean} active      True if the user hover on chart
- * @param   {Array}   payload     Datas of the chart
- * @param   {string}  type        (activity|sessions)
- * @return  {React.ReactElement}  CustomTooltip for a chart
+ * Represents the Home page
+ * @param   {Object}  user         [user description]
+ * @param   {Object}  activity     [activity description]
+ * @param   {Object}  sessions     [sessions description]
+ * @param   {Object}  performance  [performance description]
+ * @return  {React.ReactElement}  Home page
  */
-
-function CustomTooltip({ active, payload, type }) {
-  if (active &amp;&amp; payload &amp;&amp; payload.length) {
-    if (type === "activity") {
-      return (
-        &lt;div className="custom-tooltip_activity">
-          &lt;p className="label">{`${payload[0].payload?.kilogram}g`}&lt;/p>
-          &lt;p className="label">{`${payload[0].payload?.calories}KCal`}&lt;/p>
-        &lt;/div>
-      );
-    } else {
-      return (
-        &lt;div className="custom-tooltip_sessions">
-          &lt;p className="label">{`${payload[0].payload?.sessionLength} min`}&lt;/p>
-        &lt;/div>
-      );
-    }
-  }
-  return null;
+function Home({ user, activity, sessions, performance }) {
+  return (
+    &lt;div className="home">
+      &lt;NavbarV />
+      &lt;div className="dashboard">
+        &lt;Header userInfos={user?.data.userInfos} />
+        &lt;Activity sessions={activity?.data.sessions} />
+        &lt;Sessions sessions={sessions?.data.sessions} />
+        &lt;Performance
+          type={performance?.data.kind}
+          data={performance?.data.data}
+        />
+        &lt;Score userScore={user?.data.todayScore || user?.data.score} />
+        &lt;Nutrients userKeyData={user?.data.keyData} />
+      &lt;/div>
+    &lt;/div>
+  );
 }
-export default CustomTooltip;
+export default Home;
 
-CustomTooltip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
-  type: PropTypes.string.isRequired,
+Home.propTypes = {
+  user: PropTypes.object,
+  activity: PropTypes.object,
+  sessions: PropTypes.object,
+  performance: PropTypes.object,
 };
 </code></pre>
         </article>

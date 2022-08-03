@@ -1,3 +1,9 @@
+/**
+ * Represents the Error page
+ * @param   void
+ * @return  {React.ReactElement}  Error page
+ */
+
 function Error() {
   return (
     <div className="error center-element">

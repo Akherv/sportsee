@@ -34,16 +34,25 @@ function Performance({ type, data }) {
           data={datas}
           margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
         >
-          <PolarGrid vertical={false} radialLines={false} />
+          <PolarGrid
+            vertical={false}
+            radialLines={false}
+            polarRadius={[0, 10, 30, 50, 70, 98]}
+          />
+
           <PolarAngleAxis
             dataKey="subject"
             stroke="#fff"
             fontSize={12}
             tickLine={false}
             axisLine={false}
-            style={{ transform: "rotate(60)" }}
           />
-          <PolarRadiusAxis axisLine={false} tick={false} scale="auto" />
+          <PolarRadiusAxis
+            axisLine={false}
+            tick={false}
+            scale="auto"
+            domain={["dataMin", "dataMax"]}
+          />
           <Radar name="Mike" dataKey="A" fill="#FF0101" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>

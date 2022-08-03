@@ -8,6 +8,14 @@ import Score from "../components/Score";
 import Nutrients from "../components/Nutrients";
 import "../style/Home.css";
 
+/**
+ * Represents the Home page
+ * @param   {Object}  user         [user description]
+ * @param   {Object}  activity     [activity description]
+ * @param   {Object}  sessions     [sessions description]
+ * @param   {Object}  performance  [performance description]
+ * @return  {React.ReactElement}  Home page
+ */
 function Home({ user, activity, sessions, performance }) {
   return (
     <div className="home">
