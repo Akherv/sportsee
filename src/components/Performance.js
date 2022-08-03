@@ -13,7 +13,7 @@ import "../style/Performance.css";
  * Represents the Performance bloc chart.
  * @param   {Object}  type  Score type
  * @param   {Array.<{value: number, kind: number}>}  data  Score data
- * @return  {React.ReactElement} Performance bloc chart
+ * @return  {React.ReactElement} Performance bloc RadarChart component
  */
 
 function Performance({ type, data }) {

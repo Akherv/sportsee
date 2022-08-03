@@ -9,11 +9,33 @@ import Community from "./pages/Community";
 import Error from "./pages/Error";
 
 export default function App() {
-  const [user, setUser] = useState();
-  const [activity, setActivity] = useState();
-  const [sessions, setSessions] = useState();
-  const [performance, setPerformance] = useState();
-
+  const [user, setUser] = useState({
+    data: {
+      id: 0,
+      userInfos: {},
+      score: 0,
+      keyData: {},
+    },
+  });
+  const [activity, setActivity] = useState({
+    data: {
+      userId: 0,
+      sessions: [],
+    },
+  });
+  const [sessions, setSessions] = useState({
+    data: {
+      userId: 0,
+      sessions: [],
+    },
+  });
+  const [performance, setPerformance] = useState({
+    data: {
+      userId: 0,
+      kind: {},
+      data: [],
+    },
+  });
   //fetch location
   useEffect(() => {
     const url = config.url.REACT_APP_API_URL_USER;

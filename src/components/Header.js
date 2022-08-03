@@ -9,7 +9,6 @@ import "../style/Header.css";
  */
 
 function Header({ userInfos }) {
-  console.log(userInfos);
   return (
     <div className="header">
       <h1>

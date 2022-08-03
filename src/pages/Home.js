@@ -20,7 +20,7 @@ function Home({ user, activity, sessions, performance }) {
           type={performance?.data.kind}
           data={performance?.data.data}
         />
-        <Score userScore={user?.data.score} />
+        <Score userScore={user?.data.todayScore || user?.data.score} />
         <Nutrients userKeyData={user?.data.keyData} />
       </div>
     </div>

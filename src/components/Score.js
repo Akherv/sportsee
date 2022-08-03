@@ -66,7 +66,7 @@ function Score({ userScore }) {
               fontSize={30}
               className="progress-label-number"
             >
-              {userScore * 100}
+              {userScore && userScore * 100}%
             </tspan>
             <tspan
               x={330 / 2}
