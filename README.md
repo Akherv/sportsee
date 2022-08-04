@@ -6,7 +6,7 @@ This repo contains all the source code to run the FRONTEND of the micro API for 
 
 ## Technologies :
 
-React / React-router / Yarn
+React / React-router
 
 ## How to lauch the application ?
 
