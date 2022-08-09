@@ -21,5 +21,9 @@ function Header({ userInfos }) {
 export default Header;
 
 Header.propTypes = {
-  type: PropTypes.object,
+  type: PropTypes.object.isRequired,
+};
+
+Header.defaultProps = {
+  type: {},
 };

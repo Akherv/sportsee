@@ -77,5 +77,9 @@ function Sessions({ sessions }) {
 export default Sessions;
 
 Sessions.propTypes = {
-  sessions: PropTypes.array,
+  sessions: PropTypes.array.isRequired,
+};
+
+Sessions.defaultProps = {
+  sessions: [],
 };

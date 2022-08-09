@@ -31,7 +31,12 @@ function CustomTooltip({ active, payload, type }) {
 export default CustomTooltip;
 
 CustomTooltip.propTypes = {
-  active: PropTypes.bool,
-  payload: PropTypes.array,
+  active: PropTypes.bool.isRequired,
+  payload: PropTypes.array.isRequired,
   type: PropTypes.string.isRequired,
+};
+
+CustomTooltip.defaultProps = {
+  active: false,
+  payload: [],
 };

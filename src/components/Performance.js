@@ -62,6 +62,11 @@ function Performance({ type, data }) {
 export default Performance;
 
 Performance.propTypes = {
-  type: PropTypes.object,
-  data: PropTypes.array,
+  type: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
+};
+
+Performance.defaultProps = {
+  type: {},
+  data: [],
 };

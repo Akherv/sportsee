@@ -44,7 +44,11 @@ export default NutriBloc;
 NutriBloc.propTypes = {
   type: PropTypes.string.isRequired,
   bgColor: PropTypes.string.isRequired,
-  data: PropTypes.number,
+  data: PropTypes.number.isRequired,
   unit: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+};
+
+NutriBloc.defaultProps = {
+  data: 0,
 };

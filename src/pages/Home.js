@@ -21,15 +21,15 @@ function Home({ user, activity, sessions, performance }) {
     <div className="home">
       <NavbarV />
       <div className="dashboard">
-        <Header userInfos={user?.data.userInfos} />
-        <Activity sessions={activity?.data.sessions} />
-        <Sessions sessions={sessions?.data.sessions} />
+        <Header userInfos={user.data?.userInfos} />
+        <Activity sessions={activity.data?.sessions} />
+        <Sessions sessions={sessions.data?.sessions} />
         <Performance
-          type={performance?.data.kind}
-          data={performance?.data.data}
+          type={performance.data?.kind}
+          data={performance.data?.data}
         />
-        <Score userScore={user?.data.todayScore || user?.data.score} />
-        <Nutrients userKeyData={user?.data.keyData} />
+        <Score userScore={user.data?.todayScore || user.data?.score} />
+        <Nutrients userKeyData={user.data?.keyData} />
       </div>
     </div>
   );
@@ -37,8 +37,15 @@ function Home({ user, activity, sessions, performance }) {
 export default Home;
 
 Home.propTypes = {
-  user: PropTypes.object,
-  activity: PropTypes.object,
-  sessions: PropTypes.object,
-  performance: PropTypes.object,
+  user: PropTypes.object.isRequired,
+  activity: PropTypes.object.isRequired,
+  sessions: PropTypes.object.isRequired,
+  performance: PropTypes.object.isRequired,
+};
+
+Home.defaultProps = {
+  user: {},
+  activity: {},
+  sessions: {},
+  performance: {},
 };

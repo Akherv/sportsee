@@ -61,5 +61,9 @@ function Nutrients({ userKeyData }) {
 export default Nutrients;
 
 Nutrients.propTypes = {
-  userKeyData: PropTypes.object,
+  userKeyData: PropTypes.object.isRequired,
+};
+
+Nutrients.defaultProps = {
+  userKeyData: {},
 };

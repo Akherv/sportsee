@@ -102,5 +102,9 @@ function Activity({ sessions }) {
 export default Activity;
 
 Activity.propTypes = {
-  sessions: PropTypes.array,
+  sessions: PropTypes.array.isRequired,
+};
+
+Activity.defaultProps = {
+  sessions: [],
 };

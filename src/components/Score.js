@@ -93,5 +93,9 @@ function Score({ userScore }) {
 export default Score;
 
 Score.propTypes = {
-  userScore: PropTypes.number,
+  userScore: PropTypes.number.isRequired,
+};
+
+Score.defaultProps = {
+  userScore: 0,
 };
