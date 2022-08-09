@@ -10,10 +10,10 @@ import "../style/Home.css";
 
 /**
  * Represents the Home page
- * @param   {Object}  user         [user description]
- * @param   {Object}  activity     [activity description]
- * @param   {Object}  sessions     [sessions description]
- * @param   {Object}  performance  [performance description]
+ * @param   {Object}  user         User datas
+ * @param   {Object}  activity     Activity datas
+ * @param   {Object}  sessions     Sessions datas
+ * @param   {Object}  performance  Performance datas
  * @return  {React.ReactElement}  Home page
  */
 function Home({ user, activity, sessions, performance }) {
