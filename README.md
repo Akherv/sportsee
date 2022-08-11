@@ -6,7 +6,7 @@ This repo contains all the source code to run the FRONTEND of the micro API for 
 
 ## Technologies :
 
-React / React-router
+React / React-router / Recharts
 
 ## How to lauch the application ?
 
@@ -28,7 +28,7 @@ Go to the folder :
 $ cd sportsee
 ```
 
-Instal yarn packages (describe in `package.json`) :
+Install yarn packages (describe in `package.json`) :
 
 ```
 $ yarn install

@@ -29,7 +29,7 @@ function Performance({ type, data }) {
         <RadarChart
           cx="50%"
           cy="50%"
-          outerRadius="80%"
+          outerRadius="75%"
           innerRadius={10}
           data={datas}
           margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
@@ -37,13 +37,13 @@ function Performance({ type, data }) {
           <PolarGrid
             vertical={false}
             radialLines={false}
-            polarRadius={[0, 10, 30, 50, 70, 98]}
+            // polarRadius={[0, 5, 15, 25, 35, 50]}
           />
 
           <PolarAngleAxis
             dataKey="subject"
             stroke="#fff"
-            fontSize={12}
+            fontSize="0.6em"
             tickLine={false}
             axisLine={false}
           />

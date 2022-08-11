@@ -2,10 +2,18 @@
   width: 100%;
   background-color: #fbfbfb;
   grid-row: 4/8;
-  grid-column: 1/4;
+  grid-column: span 3;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1em 0;
+}
+
+.activity .recharts-legend-item-text {
+  font-size: 0.7em;
+}
+
+.activity .recharts-legend-item-text:nth-of-type(1) {
+  color: #74798c !important;
 }

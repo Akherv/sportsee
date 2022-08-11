@@ -24,22 +24,27 @@ function Sessions({ sessions }) {
           height={100}
           data={datas}
           margin={{
-            top: 100,
+            top: 80,
             right: 20,
             left: 20,
             bottom: 5,
           }}
         >
           <text
-            x={230 / 2}
-            y={80 / 2}
-            textAnchor="middle"
+            y="10%"
+            textAnchor="left"
             dominantBaseline="middle"
             className="progress-label"
             fill="rgba(255,255,255,80%)"
-            fontSize={15}
+            fontSize="0.7em"
           >
-            Durée moyenne des sessions
+            <tspan x="10%" dy="10">
+              Durée moyenne des
+            </tspan>
+            <tspan></tspan>
+            <tspan x="10%" dy="20">
+              sessions
+            </tspan>
           </text>
           <Line
             type="monotone"
@@ -58,7 +63,7 @@ function Sessions({ sessions }) {
           <XAxis
             dataKey="name"
             stroke="rgba(255,255,255,80%)"
-            fontSize={15}
+            fontSize="0.7em"
             axisLine={false}
             tickLine={false}
           />
@@ -66,6 +71,7 @@ function Sessions({ sessions }) {
             content={<CustomTooltip type="sessions" />}
             contentStyle={{
               color: "#000",
+              fontSize: "0.7em",
             }}
             cursor={false}
           />

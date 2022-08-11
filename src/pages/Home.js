@@ -23,12 +23,14 @@ function Home({ user, activity, sessions, performance }) {
       <div className="dashboard">
         <Header userInfos={user.data?.userInfos} />
         <Activity sessions={activity.data?.sessions} />
-        <Sessions sessions={sessions.data?.sessions} />
-        <Performance
-          type={performance.data?.kind}
-          data={performance.data?.data}
-        />
-        <Score userScore={user.data?.todayScore || user.data?.score} />
+        <div className="container-chart">
+          <Sessions sessions={sessions.data?.sessions} />
+          <Performance
+            type={performance.data?.kind}
+            data={performance.data?.data}
+          />
+          <Score userScore={user.data?.todayScore || user.data?.score} />
+        </div>
         <Nutrients userKeyData={user.data?.keyData} />
       </div>
     </div>

@@ -26,12 +26,10 @@ function Score({ userScore }) {
     <div className="score">
       <ResponsiveContainer width="100%" height="100%">
         <RadialBarChart
-          cx={circleSize / 1.8}
-          cy={circleSize / 2}
           width={circleSize}
           height={circleSize}
           data={data}
-          innerRadius={90}
+          innerRadius="70%"
           barSize={10}
           startAngle={180}
           endAngle={-180}
@@ -50,36 +48,39 @@ function Score({ userScore }) {
             clockwise
           />
           <text
-            x={100 / 2}
-            y={80 / 2}
+            x="20%"
+            y="15%"
             textAnchor="middle"
             dominantBaseline="middle"
             className="progress-label"
+            fontSize="0.8em"
           >
             Score
           </text>
-          <text textAnchor="middle" dominantBaseline="middle" fontSize={15}>
+          <text textAnchor="middle" dominantBaseline="middle" fontSize="1em">
             <tspan
-              x={330 / 2}
-              y={220 / 2}
+              x="50%"
+              y="35%"
               dy="0.71em"
-              fontSize={30}
+              fontSize="1.2em"
               className="progress-label-number"
             >
               {userScore && userScore * 100}%
             </tspan>
             <tspan
-              x={330 / 2}
-              y={300 / 2}
-              dy="0.71em"
+              x="50%"
+              y="50%"
+              dy="0.5em"
+              fontSize="0.7em"
               className="progress-label-text"
             >
               de votre
             </tspan>
             <tspan
-              x={330 / 2}
-              y={350 / 2}
-              dy="0.71em"
+              x="50%"
+              y="58%"
+              dy="0.5em"
+              fontSize="0.7em"
               className="progress-label-text"
             >
               objectif

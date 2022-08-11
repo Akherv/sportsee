@@ -1,7 +1,7 @@
 .nutrients {
   width: 100%;
   grid-row: 4/12;
-  grid-column: 4/5;
+  grid-column: span 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,5 @@
 
 .nutrients li {
   width: 100%;
-  max-width: 150px;
-  height: 20%;
+  max-width: 200px;
 }

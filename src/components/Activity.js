@@ -38,15 +38,16 @@ function Activity({ sessions }) {
             left: 20,
             bottom: 5,
           }}
+          barGap={10}
         >
           <text
-            x={200 / 2}
-            y={80 / 2}
+            x="10%"
+            y="12%"
             textAnchor="middle"
             dominantBaseline="middle"
             className="progress-label"
             fill="#000"
-            fontSize={15}
+            fontSize="0.7em"
           >
             Activité quotidienne
           </text>
@@ -59,6 +60,8 @@ function Activity({ sessions }) {
             stroke="#9B9EAC"
             axisLine={false}
             tickLine={false}
+            // domain={["dataMin", "dataMax"]}
+            allowDecimals={false}
           />
           <Tooltip
             content={<CustomTooltip type="activity" />}
@@ -79,7 +82,7 @@ function Activity({ sessions }) {
             iconSize={8}
           />
           <Bar
-            barSize={15}
+            barSize={10}
             yAxisId="left"
             dataKey="kilogram"
             name="Poids (Kg)"
@@ -87,7 +90,7 @@ function Activity({ sessions }) {
             radius={[10, 10, 0, 0]}
           />
           <Bar
-            barSize={15}
+            barSize={10}
             yAxisId="right"
             dataKey="calories"
             name="Calories brûlées (kCal)"
